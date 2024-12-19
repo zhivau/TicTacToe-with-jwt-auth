@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Page App - Login, Signup, Game</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="static/js/main.js" defer></script>
+</head>
+<body>
+    <nav>
+        <button onclick="showProfile()">Profile</button>
+        <button onclick="showHistory()">History</button>
+        <button onclick="showLeaderBoard()">Leaderboard</button>
+        <button onclick="showLogin()">Log In</button>
+        <button onclick="showSignup()">Sign Up</button>
+        <button onclick="showGame()">Play Game</button>
+<!--        <button onclick="test()">test</button>-->
+    </nav>
+
+    <section id="profile-section" class="hidden">
+        <h2>Profile</h2>
+        <p>User ID: <span id="user-id"></span></p>
+        <p>Login: <span id="user-login"></span></p>
+    </section>
+
+    <section id="history-section" class="hidden">
+        <h3>Game History</h3>
+        <ul id="game-history"></ul>
+    </section>
+
+    <section id="leader-board-section" class="hidden">
+        <h3>Leaderboard</h3>
+        <ul id="leader-board"></ul>
+    </section>
+
+    <section id="login-section" class="hidden">
+        <h2>Log In</h2>
+        <form id="login-form">
+            <label for="login">Login:</label>
+            <input type="text" id="login" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required><br><br>
+
+            <button type="submit">Log In</button>
+        </form>
+    </section>
+
+    <section id="signup-section" class="hidden">
+        <h2>Register</h2>
+        <form id="signup-form">
+            <label for="signup-login">Login:</label>
+            <input type="text" id="signup-login" required><br><br>
+
+            <label for="signup-password">Password:</label>
+            <input type="password" id="signup-password" required><br><br>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </section>
+
+    <section id="game-section" class="hidden">
+        <button id="start-game-btn-cmp">Start New Game With Computer</button>
+        <button id="start-game-btn-usr">Start New Game With User</button>
+        <button id="join-game-btn">Join Game</button>
+
+        <div id="game-buttons"></div>
+
+        <form id="game-form" class="hidden">
+            <div class="grid">
+                <button type="button" class="cell" data-position="0-0"></button>
+                <button type="button" class="cell" data-position="0-1"></button>
+                <button type="button" class="cell" data-position="0-2"></button>
+                <button type="button" class="cell" data-position="1-0"></button>
+                <button type="button" class="cell" data-position="1-1"></button>
+                <button type="button" class="cell" data-position="1-2"></button>
+                <button type="button" class="cell" data-position="2-0"></button>
+                <button type="button" class="cell" data-position="2-1"></button>
+                <button type="button" class="cell" data-position="2-2"></button>
+            </div>
+        </form>
+        <div id="game-over-message" class="hidden">Game Over!</div>
+    </section>
+
+    <script src="static/js/login.js" defer></script>
+    <script src="static/js/signup.js" defer></script>
+    <script src="static/js/game.js" defer></script>
+    <script src="static/js/profile.js" defer></script>
+    <script src="static/js/history.js" defer></script>
+    <script src="static/js/leader_board.js" defer></script>
+</body>
+</html>
